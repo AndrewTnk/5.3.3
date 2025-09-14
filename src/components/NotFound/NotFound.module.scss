@@ -1,0 +1,33 @@
+.container {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.errorCode {
+  font-size: 120px;
+  font-weight: 900;
+  color: #e9ecef;
+  line-height: 1;
+  user-select: none;
+}
+
+.head {
+  width: auto;
+  height: 88px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #212529;
+  text-align: left;
+  margin-left: 20px !important;
+}
+
+.description {
+  text-align: left;
+  max-width: 400px;
+  line-height: 1.6;
+}

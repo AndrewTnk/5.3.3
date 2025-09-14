@@ -1,0 +1,36 @@
+.container {
+  width: 100%;
+}
+
+.tabs {
+  :global(.mantine-Tabs-list) {
+    border-bottom: 1px solid #e9ecef;
+    margin-bottom: 0;
+  }
+
+  :global(.mantine-Tabs-tab) {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #6c757d;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: #495057;
+      background-color: #f8f9fa;
+    }
+
+    &[data-active="true"] {
+      color: #000;
+      border-bottom-color: #007bff;
+      background-color: transparent;
+    }
+  }
+
+  :global(.mantine-Tabs-panel) {
+    padding-top: 0;
+  }
+}
+
+
