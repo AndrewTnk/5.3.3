@@ -14,6 +14,24 @@ import { About } from './components/About/About';
 import { NotFound } from './components/NotFound/NotFound';
 import classes from './App.module.scss';
 
+function handleGitHubPagesRedirect() {
+  const l = window.location;
+  if (l.search[1] === '/') {
+    const decoded = l.search
+      .slice(1)
+      .split('&')
+      .map(s => s.replace(/~and~/g, '&'))
+      .join('?');
+    window.history.replaceState(
+      null,
+      '',
+      l.pathname.slice(0, -1) + decoded + l.hash
+    );
+  }
+}
+
+handleGitHubPagesRedirect();
+
 function VacanciesPage() {
   return (
     <>
@@ -32,7 +50,7 @@ function VacanciesPage() {
 
 function App() {
   return (
-    <Router basename="/5.2.9">
+    <Router basename="/5.3.3">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Navigate to="/vacancies" replace />} />

@@ -87,12 +87,6 @@ export function VacancyList() {
               </Center>
             )}
 
-            {isError && !isLoading && (
-              <Center my="xl">
-                <Text c="red">Ошибка загрузки</Text>
-              </Center>
-            )}
-
             {!isLoading &&
               !isError &&
               (data?.items ?? []).map(vacancy => (
@@ -128,12 +122,6 @@ export function VacancyList() {
             {isLoading && (
               <Center my="xl">
                 <Loader />
-              </Center>
-            )}
-
-            {isError && !isLoading && (
-              <Center my="xl">
-                <Text c="red">Ошибка загрузки</Text>
               </Center>
             )}
 
